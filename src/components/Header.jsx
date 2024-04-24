@@ -1,5 +1,5 @@
 import { Flex, Box, Text, Image } from '@chakra-ui/react';
-import searchLogo from './assets/search.svg';
+import searchLogo from '../assets/search.svg';
 
 const Header = () => {
 
