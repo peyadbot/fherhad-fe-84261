@@ -1,5 +1,5 @@
-# Movie Webpage with Chakra UI
-This React project retrieves movie data from the OMDb API and allows users to search for movies by title. It utilizes Chakra UI for a visually appealing interface.
+# Movie Webpage with Chakra UI & Vite
+This React project retrieves movie data from the OMDb API and allows users to search for movies by title. It utilizes Chakra UI for a visually appealing interface. For the development server im using vite. 
 
 ## Fetching Data
 
