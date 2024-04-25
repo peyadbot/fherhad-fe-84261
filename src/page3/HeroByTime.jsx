@@ -156,8 +156,8 @@ const ByTime = () => {
             <Button
               borderRadius='27px'
               border={'none'}
-              width='161px'
-              height='54px'
+              w='161px'
+              h='54px'
               fontWeight={'bold'} fontSize={'21px'}
               background={'#FED530'}
               _hover={{ 

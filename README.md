@@ -1,8 +1,22 @@
-# React + Vite
+# Movie Webpage with Chakra UI
+This React project retrieves movie data from the OMDb API and allows users to search for movies by title. It utilizes Chakra UI for a visually appealing interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Fetching Data
 
-Currently, two official plugins are available:
+This project makes API requests to the OMDb API using Axios to retrieve movie data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For the Postman API im having trouble fetching the movie data(limitation error).
+
+## Chakra UI Integration
+
+Chakra UI provides components like Input, Button making it easy and fast to build a commponent.
+
+## Movie Search Functionality
+
+- Users can enter a movie title in the search input field.
+- Upon searching, the app fetches data from the OMDb API and updates the UI to display retrieved movie information, such as title, type. Due to the limitation there is not much info can be display base on the design guide(some part are just hard coded)
+
+## By
+
+- Fherhad Aditya
+

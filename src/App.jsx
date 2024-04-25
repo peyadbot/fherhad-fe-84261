@@ -1,5 +1,5 @@
 import { ChakraProvider, Box } from '@chakra-ui/react';
-import './index.css';
+// import './index.css';
 import Theme from './Theme';
 
 import HomePage1 from './page1/Homepage1';
@@ -10,9 +10,10 @@ function App() {
   return (
     <Box w='100vw' bg={'primary.DarkGray'}>
       <ChakraProvider theme={Theme}>
+        {/* Uncomment the page that you wanted to see */}
         <HomePage1 />
-        <HomePage2 />
-        <HomePage3 />
+        {/* <HomePage2 /> */}
+        {/* <HomePage3 /> */}
       </ChakraProvider>
     </Box>
   )
