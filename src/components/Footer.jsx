@@ -1,12 +1,11 @@
-import { Box, Text, Stack, Button, Input, Flex, Image} from "@chakra-ui/react";
-import { PhoneIcon, EmailIcon, ArrowForwardIcon } from '@chakra-ui/icons'
-import MarkerSVG from "../assets/marker.svg";
-
+import { Box, Text, Stack, Button, Input, Flex, Image } from '@chakra-ui/react';
+import { PhoneIcon, EmailIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+import MarkerSVG from '../assets/marker.svg';
 
 // Component for list headers bold 
 const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight="bold" fontSize="md" mb={2} color="white">
+    <Text fontWeight="bold" fontSize="md" mb="2" color="white">
       {children}
     </Text>
   );
@@ -35,10 +34,10 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-            {/* Newsletter subscription */}
             <Text fontWeight="bold" fontSize="h6" mb="24px" color="text.White">
               Join Newsletters
             </Text>
+            {/* Newsletter subscription */}
             <Box position="relative" h="64px" w="282px">
               <Input
                 placeholder="Insert your mail here"
@@ -75,7 +74,7 @@ const Footer = () => {
           {/* Menu links */}
           <Flex wrap="wrap" mt="133px" mb="99px">
             {/* Product */}
-            <Stack spacing={6} flex="0 0 calc(33.333% - 20px)" fontWeight="regular">
+            <Stack spacing="6" flex="0 0 calc(33.333% - 20px)" fontWeight="regular">
               <ListHeader>Product</ListHeader>
               <Box as="a" href="#" fontWeight="regular" _hover={{ color: "secondary.Yellow" }}>
                 Movies
@@ -88,7 +87,7 @@ const Footer = () => {
               </Box>
             </Stack>
             {/* Media Group */}
-            <Stack spacing={6} flex="0 0 calc(33.333% - 20px)">
+            <Stack spacing="6" flex="0 0 calc(33.333% - 20px)">
               <ListHeader>Media Group</ListHeader>
               <Box as="a" href="#" fontWeight="regular" _hover={{ color: "secondary.Yellow" }}>
                 Nice Studio
@@ -101,7 +100,7 @@ const Footer = () => {
               </Box>
             </Stack>
             {/* Sitemap */}
-            <Stack spacing={6} flex="0 0 calc(33.333% - 20px)">
+            <Stack spacing="6" flex="0 0 calc(33.333% - 20px)">
               <ListHeader>Sitemap</ListHeader>
               <Box as="a" href="#" fontWeight="regular" _hover={{ color: "secondary.Yellow" }}>
                 About
@@ -115,18 +114,18 @@ const Footer = () => {
             </Stack>
           </Flex>
           {/* Contact information */}
-          <Flex gap={10} color="white">
+          <Flex gap="10" color="white">
             <Flex align="center">
               <Image src={MarkerSVG} alt="Marker" />
-              <Text ml={2}>8819 Ohio St. South Gate, California 90280</Text>
+              <Text ml="2">8819 Ohio St. South Gate, California 90280</Text>
             </Flex>
             <Flex align="center">
               <EmailIcon />
-              <Text ml={2}>ourstudio@hello.com</Text>
+              <Text ml="2">ourstudio@hello.com</Text>
             </Flex>
             <Flex align="center">
               <PhoneIcon />
-              <Text ml={2}>+271 386-647-3637</Text>
+              <Text ml="2">+271 386-647-3637</Text>
             </Flex>
           </Flex>
         </Box>

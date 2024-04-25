@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Flex, Text, Grid, GridItem } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { SearchContext } from '../api/SearchContext';
 import MovieCard from '../components/MovieCard';
@@ -9,34 +9,34 @@ const Content = () => {
   return (
     <div>
       <Box
-        justifyContent="center"
-        alignItems="center"
-        w="100%"
+        justifyContent='center'
+        alignItems='center'
+        w='100%'
         p={50}
       >
-        {/*section */}
-        <Flex direction="column" maxW="1500px" mx="auto">
+        {/* Section */}
+        <Flex direction='column' maxW='1500px' mx='auto'>
           {/* Section Title */}
           <Flex
-            justify={"space-between"}
-            mb={"64px"}
-            alignItems={"center"}
+            justify='space-between'
+            mb='64px'
+            alignItems='center'
           >
-            <Text color={"text.White"} fontSize={"h3"} fontWeight={"bold"}>
+            <Text color='text.White' fontSize='h3' fontWeight='bold'>
               Search Results
             </Text>
           </Flex>
 
           {error && (
-            <Text color="red" fontSize={"h5"}>
+            <Text color='red' fontSize='h5'>
               {error}
             </Text>
           )}
           
           {/* Movie details */}
-          <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+          <Grid templateColumns='repeat(3, 1fr)' gap={6}>
             {loading ? (
-              <Text color={"text.White"} fontSize={"h5"}>Loading...</Text>
+              <Text color='text.White' fontSize='h5'>Loading...</Text>
             ) : (
               movies.map((movie) => (
                 <GridItem key={movie.imdbID}>

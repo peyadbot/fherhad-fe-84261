@@ -1,4 +1,5 @@
 import { Flex, Box, Text, Image } from '@chakra-ui/react';
+import { SearchIcon } from '@chakra-ui/icons'
 import searchLogo from '../assets/search.svg';
 
 const Header = () => {
@@ -68,15 +69,23 @@ const Header = () => {
 
         <Flex align="center">
           {/* Search Logo */}
-          <Box mr={'48px'}>
+          {/* <Box mr={'48px'}>
             <Image src={searchLogo} alt="Search Logo" />
-          </Box>
+          </Box> */}
+          <SearchIcon 
+            mr={'48px'} 
+            boxSize={6} 
+            _hover={{
+              color: "text.Yellow",
+              cursor: 'pointer'
+            }}
+            />
 
           {/* Profile Picture */}
           <Box borderRadius="full" bg="primary.DarkGray" boxSize={14} mr={'16px'}></Box>
           
           {/* Name */}
-          <Text color="white" fontSize="h6" fontWeight="bold" mr={'103px'}>John Doe</Text>
+          <Text color="white" fontSize="h6" fontWeight="bold" mr={'103px'} _hover={{color: "text.Yellow", cursor: 'pointer'}}>John Doe</Text>
         </Flex>
       </Flex>
     </Box>

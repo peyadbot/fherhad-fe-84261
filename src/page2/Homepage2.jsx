@@ -4,7 +4,7 @@ import { SearchProvider } from '../api/SearchContext';
 import Content from './ContentTheater';
 import Footer from '../components/Footer';
 
-function AllMoviesPage() {
+function MoviesPage() {
   return (
     <div>
       <SearchProvider>
@@ -17,4 +17,4 @@ function AllMoviesPage() {
   );
 }
 
-export default AllMoviesPage;
+export default MoviesPage;
