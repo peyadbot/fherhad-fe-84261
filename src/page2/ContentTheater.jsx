@@ -1,11 +1,10 @@
 import { Box, Flex, Text, Grid, GridItem } from "@chakra-ui/react";
 import { useContext } from 'react';
-import { MovieContext } from '../api/MovieContext';
-import MovieCard from './MovieCard';
+import { SearchContext } from '../api/SearchContext';
+import MovieCard from '../components/MovieCard';
 
 const Content = () => {
-  const { movies, loading } = useContext(MovieContext);
-  const moviesToShow = movies.slice(0, 5);
+  const { movies, loading, error } = useContext(SearchContext);
 
   return (
     <div>
@@ -24,21 +23,23 @@ const Content = () => {
             alignItems={"center"}
           >
             <Text color={"text.White"} fontSize={"h3"} fontWeight={"bold"}>
-              New Releases
+              Search Results
             </Text>
-            {/* "View More" link */}
-            <Box as="a" color={"text.Yellow"} fontSize={"h5"} fontWeight={"bold"}>
-              View More
-            </Box>
           </Flex>
+
+          {error && (
+            <Text color="red" fontSize={"h5"}>
+              {error}
+            </Text>
+          )}
           
           {/* Movie details */}
           <Grid templateColumns="repeat(3, 1fr)" gap={6}>
             {loading ? (
-              <Text color={"text.White"}>Loading...</Text>
+              <Text color={"text.White"} fontSize={"h5"}>Loading...</Text>
             ) : (
-              moviesToShow.map((movie, index) => (
-                <GridItem key={movie.imdbID} colSpan={index === 0 ? 2 : 1}>
+              movies.map((movie) => (
+                <GridItem key={movie.imdbID}>
                   <MovieCard
                     key={movie.imdbID}
                     title={movie.Title}

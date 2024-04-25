@@ -3,9 +3,8 @@ import axios from 'axios';
 
 export const MovieContext = createContext();
 
-// const apiKey = '3efdf314';
-// const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&type=movie`;
-const apiUrl = `https://www.omdbapi.com/?s=Batman&apikey=3efdf314`;
+const apiKey = '3efdf314';
+const apiUrl = `https://www.omdbapi.com/?s=Batman&apikey=${apiKey}`;
 
 
 export const MovieProvider = ({ children }) => {
@@ -17,7 +16,8 @@ export const MovieProvider = ({ children }) => {
     const fetchMovies = async () => {
       try {
         if (!fetched) {
-          const response = await axios.get(`${apiUrl}`);
+          const response = await axios.get(apiUrl);
+          
           setMovies(response.data.Search);
           setLoading(false);
           setFetched(true);

@@ -1,10 +1,9 @@
-import { Box, Text, Stack, Button, Input, Flex, Image } from "@chakra-ui/react";
-import PhoneSVG from "../assets/phone.svg";
-import MailSVG from "../assets/mail.svg";
+import { Box, Text, Stack, Button, Input, Flex, Image} from "@chakra-ui/react";
+import { PhoneIcon, EmailIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import MarkerSVG from "../assets/marker.svg";
-import ArrowSVG from "../assets/arrow.svg";
 
-// Component for list headers
+
+// Component for list headers bold 
 const ListHeader = ({ children }) => {
   return (
     <Text fontWeight="bold" fontSize="md" mb={2} color="white">
@@ -48,6 +47,7 @@ const Footer = () => {
                 color="white"
                 pr="60px"
                 h="100%"
+                focusBorderColor="transparent"
               />
               <Button
                 w="48px"
@@ -59,8 +59,12 @@ const Footer = () => {
                 transform="translateX(40%) translateY(-50%)"
                 p={0}
                 zIndex={99}
+                _hover={{ 
+                  bg: 'secondary.MediumGray',
+                  color: 'text.White',
+                }} 
               >
-                <Image src={ArrowSVG} alt="Button Arrow" />
+                <ArrowForwardIcon />
               </Button>
             </Box>
           </Flex>
@@ -117,11 +121,11 @@ const Footer = () => {
               <Text ml={2}>8819 Ohio St. South Gate, California 90280</Text>
             </Flex>
             <Flex align="center">
-              <Image src={MailSVG} alt="Mail" />
+              <EmailIcon />
               <Text ml={2}>ourstudio@hello.com</Text>
             </Flex>
             <Flex align="center">
-              <Image src={PhoneSVG} alt="Phone" />
+              <PhoneIcon />
               <Text ml={2}>+271 386-647-3637</Text>
             </Flex>
           </Flex>
