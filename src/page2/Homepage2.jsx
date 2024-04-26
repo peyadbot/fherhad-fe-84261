@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import Hero from './HeroByTheater';
 import { SearchProvider } from '../api/SearchContext';
-import Content from './ContentTheater';
+import Content from './ContentTheatre';
 import Footer from '../components/Footer';
 
 function MoviesPage() {
